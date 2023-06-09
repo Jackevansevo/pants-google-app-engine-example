@@ -3,6 +3,7 @@ import gunicorn
 import scipy
 from lib.example import shared
 from flask import Flask
+import psycopg2
 
 app = Flask(__name__)
 
@@ -14,6 +15,7 @@ def root():
         "gunciorn": gunicorn.__version__,
         "scipy": scipy.__version__,
         "shared (requests)": shared(),
+        "psycopg2": psycopg2.__version__,
     }
 
 

@@ -18,7 +18,7 @@ search_path = ["<PYENV>", "/opt/python3"]
 
 [environments-preview.names]
 linux = "//:linux"
-macos = "//:local"
+macos = "//:macos"
 
 [anonymous-telemetry]
 enabled = false
