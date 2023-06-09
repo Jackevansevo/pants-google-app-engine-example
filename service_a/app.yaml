@@ -1,0 +1,9 @@
+runtime: python311
+service: example
+entrypoint: ./__main__.py
+
+handlers:
+
+- url: /.*
+  script: auto
+

@@ -1,0 +1,24 @@
+[GLOBAL]
+pants_version = "2.16.0rc4"
+backend_packages = [
+  'pants.backend.python',
+  'pants.backend.python.lint.autoflake',
+  'pants.backend.python.lint.black',
+  'pants.backend.python.lint.isort',
+  'pants.backend.google_cloud_function.python',
+  'pants.backend.python.mixed_interpreter_constraints',
+]
+
+[python]
+interpreter_constraints = ["CPython==3.11.*"]
+enable_resolves = true
+
+[python-bootstrap]
+search_path = ["<PYENV>", "/opt/python3"]
+
+[environments-preview.names]
+linux = "//:linux"
+macos = "//:local"
+
+[anonymous-telemetry]
+enabled = false
