@@ -7,6 +7,7 @@ backend_packages = [
   'pants.backend.python.lint.isort',
   'pants.backend.google_cloud_function.python',
   'pants.backend.python.mixed_interpreter_constraints',
+  'pants.backend.docker',
 ]
 
 [python]
@@ -19,6 +20,7 @@ search_path = ["<PYENV>", "/opt/python3"]
 [environments-preview.names]
 linux = "//:linux"
 macos = "//:macos"
+docker = "//:docker"
 
 [anonymous-telemetry]
 enabled = false
