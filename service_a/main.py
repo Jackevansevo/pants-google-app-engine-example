@@ -1,6 +1,7 @@
 import flask
 import gunicorn
 import scipy
+from lib.example import shared
 from flask import Flask
 
 app = Flask(__name__)
@@ -12,6 +13,7 @@ def root():
         "flask": flask.__version__,
         "gunciorn": gunicorn.__version__,
         "scipy": scipy.__version__,
+        "shared (requests)": shared(),
     }
 
 
